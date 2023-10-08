@@ -1,0 +1,1 @@
+Type-safe, multi-listenable, dispose safe event handling
