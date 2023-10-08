@@ -1,5 +1,5 @@
 name: events_emitter2
-description: Type-safe, multi-listenable, dispose safe event handling
+description: Type-safe, multi-listenable, dispose safe event handling classes
 version: 1.0.0
 repository: https://github.com/moham96/events_emitter2
 
