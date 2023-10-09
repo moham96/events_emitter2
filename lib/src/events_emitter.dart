@@ -18,7 +18,6 @@ import 'dart:collection';
 import 'package:events_emitter2/src/disposable.dart';
 import 'package:events_emitter2/src/extensions.dart';
 import 'package:logging/logging.dart';
-import 'package:meta/meta.dart';
 import 'package:synchronized/synchronized.dart' as sync;
 
 typedef CancelListenFunc = Function();
@@ -48,7 +47,6 @@ class EventsEmitter<T> extends EventsListenable<T> {
   @override
   EventsEmitter<T> get emitter => this;
 
-  @internal
   void emit(T event) {
     // check if already disposed
     if (isDisposed) {
@@ -64,7 +62,6 @@ class EventsEmitter<T> extends EventsListenable<T> {
     streamCtrl.add(event);
   }
 
-  @internal
   void updateQueueMode(bool newValue, {bool shouldEmitQueued = true}) {
     // check if already disposed
     if (isDisposed) {
@@ -76,7 +73,6 @@ class EventsEmitter<T> extends EventsListenable<T> {
     if (!_queueMode && shouldEmitQueued) emitQueued();
   }
 
-  @internal
   void emitQueued() {
     while (_queue.isNotEmpty) {
       final event = _queue.removeFirst();
