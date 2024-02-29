@@ -10,3 +10,6 @@
 
 ## 1.0.3
 -  make the dependencies compatible with flutter_test
+
+## 1.0.4
+- make the dependencies compatible with latest flutter updates
